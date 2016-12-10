@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,9 +15,7 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 import com.google.android.gms.appindexing.Action;
-
 import com.google.android.gms.appindexing.Thing;
-
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -28,7 +26,6 @@ public class Manu0012 extends AppCompatActivity {
     protected static final int RESULT_SPEECH = 1;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +34,7 @@ public class Manu0012 extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setIcon(new ColorDrawable(getResources().getColor(android.R.color.transparent)));
-        getSupportActionBar().setTitle(Html.fromHtml("<font style='normal' color='#ffffff'>"+"ย้อนกลับ"+" </font>")) ;
+        getSupportActionBar().setTitle(Html.fromHtml("<font style='normal' color='#ffffff'>" + "ย้อนกลับ" + " </font>"));
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#99CC33")));
 
         ListView lv = (ListView) findViewById(R.id.listtemple);
@@ -48,9 +45,6 @@ public class Manu0012 extends AppCompatActivity {
 
         ListAdapter adapter = new SimpleAdapter(Manu0012.this, getType, R.layout.view_temple, new String[]{DT_temple011.temple_name}, new int[]{R.id.temple_name});
         lv.setAdapter(adapter);
-
-
-
 
 
 //กดแล้วเเข้าไปรายชื่อวัด//
@@ -74,10 +68,6 @@ public class Manu0012 extends AppCompatActivity {
     }   // Main Method
 
 
-
-
-
-
     public int getCount() {
         return 9;
     }
@@ -89,7 +79,6 @@ public class Manu0012 extends AppCompatActivity {
     public long getItemId(int position) {
         return position;
     }
-
 
 
     // ปุ่มย้อนกลับแทบบรา
