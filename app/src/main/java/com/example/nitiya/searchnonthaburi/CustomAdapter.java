@@ -18,8 +18,9 @@ import java.util.HashMap;
 
 public class CustomAdapter extends BaseAdapter {
 
-    Context mContext;
-    ArrayList<HashMap<String, Object>> listdata;
+    //Explicit
+    private Context mContext;
+    private ArrayList<HashMap<String, Object>> listdata;
 
     public CustomAdapter(Context mContext, ArrayList<HashMap<String, Object>> listdata) {
         this.mContext = mContext;

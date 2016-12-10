@@ -4,17 +4,15 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Html;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -23,15 +21,14 @@ import com.google.android.gms.common.api.GoogleApiClient;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Objects;
 
 public class Manu0011 extends AppCompatActivity {
 
+    //Explicit
     protected static final int RESULT_SPEECH = 1;
     private GoogleApiClient client;
-    ArrayList<HashMap<String, Object>> getType;
-    CustomAdapter customAdapter;
+    private ArrayList<HashMap<String, Object>> getType;
+    private CustomAdapter customAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,22 +46,33 @@ public class Manu0011 extends AppCompatActivity {
 
         getType = data_temple.getTypeList();
 
-        customAdapter = new CustomAdapter(getApplicationContext(),getType);
+        customAdapter = new CustomAdapter(getApplicationContext(), getType);
 
         ListAdapter adapter = new SimpleAdapter(Manu0011.this, getType, R.layout.view_temple, new String[]{DT_temple011.temple_name}, new int[]{R.id.temple_name});
 
         lv.setAdapter(customAdapter);
 
         //กดแล้วเเข้าไปรายชื่อวัด//
+//        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                int type = Integer.parseInt(String.valueOf(getType.get(position).get(DT_temple011.temple_id)));
+//                Intent objIndent = new Intent(getApplicationContext(), DT_dise011.class);
+//                objIndent.putExtra("temple", type);
+//                startActivity(objIndent);
+//            }
+//        });
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                int type = Integer.parseInt(String.valueOf(getType.get(position).get(DT_temple011.temple_id)));
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                int type = Integer.parseInt(String.valueOf(getType.get(i).get(DT_temple011.temple_id)));
                 Intent objIndent = new Intent(getApplicationContext(), DT_dise011.class);
                 objIndent.putExtra("temple", type);
                 startActivity(objIndent);
             }
         });
+
 
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

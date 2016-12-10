@@ -24,7 +24,7 @@ import java.util.HashMap;
 
 public class Manu0012 extends AppCompatActivity {
 
-
+    //Explicit  นี่คือการประกาศตัวแปร
     protected static final int RESULT_SPEECH = 1;
 
 
@@ -71,7 +71,7 @@ public class Manu0012 extends AppCompatActivity {
         getSupportActionBar().setTitle(Html.fromHtml("<font style='normal' color='#ffffff'>" + "ค้นหา9วัดโดยอัติโนมัติ" + " </font>"));
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#99CC33")));
 
-    }
+    }   // Main Method
 
 
 
@@ -133,4 +133,4 @@ public class Manu0012 extends AppCompatActivity {
         // See https://g.co/AppIndexing/AndroidStudio for more information.
 
     }
-}
+}   // Main class

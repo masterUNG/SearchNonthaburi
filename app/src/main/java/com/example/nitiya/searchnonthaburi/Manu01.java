@@ -1,27 +1,15 @@
 package com.example.nitiya.searchnonthaburi;
 
-import android.annotation.TargetApi;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.location.LocationManager;
-import android.net.ConnectivityManager;
-import android.os.Build;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
 public class Manu01 extends AppCompatActivity {
 
 
-
-    ImageButton img01,img02,img03;
-
-
+    ImageButton img01, img02, img03;
 
 
     @Override
@@ -63,7 +51,6 @@ public class Manu01 extends AppCompatActivity {
             }
 
         });
-
 
 
     }
