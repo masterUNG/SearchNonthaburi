@@ -26,6 +26,7 @@ public class Manu0012 extends AppCompatActivity {
     protected static final int RESULT_SPEECH = 1;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
